@@ -24,8 +24,11 @@ export default function DashboardHeader({
         </div>
 
         <div>
-          <h1>Medication Reminder</h1>
+          <h1>Medication Reminder</h1>	
           <p>{dateText}</p>
+	  <p>
+ 	   Developed by: Long Nguyen
+	  </p>
         </div>
       </div>
 

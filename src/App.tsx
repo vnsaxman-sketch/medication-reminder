@@ -419,7 +419,6 @@ function App() {
         <span>
           Medication Reminder Dashboard
         </span>
-
         <span>
           Personal tracking tool • Not medical
           advice
