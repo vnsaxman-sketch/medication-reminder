@@ -1170,4 +1170,7 @@ button {
   .delete-button {
     justify-content: center;
   }
+  .safety-message {
+    font-weight: 800;
+  }
 }

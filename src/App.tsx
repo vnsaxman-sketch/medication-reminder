@@ -371,14 +371,14 @@ function App() {
 
               <h3>Medication Safety</h3>
 
-              <p>
+              <p className="safety-message">
                 This app is a reminder and
-                tracking tool. It does not provide
+                tracking tool only. It does not provide
                 medical advice or determine when
                 you should take a medication.
               </p>
 
-              <p>
+              <p className="safety-message">
                 Always follow the instructions
                 provided by your doctor or
                 pharmacist.
