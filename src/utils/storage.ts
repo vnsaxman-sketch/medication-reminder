@@ -7,7 +7,7 @@ const defaultMedications: Medication[] = [
   {
     id: 'med-1',
     name: 'Morning Medication',
-    dosage: '1 tablet',
+    dosage: '0 tablet',
     instructions: 'Take with water',
     times: ['08:00'],
     startDate: '2026-01-01',
@@ -17,7 +17,7 @@ const defaultMedications: Medication[] = [
   {
     id: 'med-2',
     name: 'Afternoon Medication',
-    dosage: '1 tablet',
+    dosage: '0 tablet',
     instructions: 'Take after lunch',
     times: ['14:00'],
     startDate: '2026-01-01',
@@ -27,7 +27,7 @@ const defaultMedications: Medication[] = [
   {
     id: 'med-3',
     name: 'Evening Medication',
-    dosage: '2 tablets',
+    dosage: '0 tablets',
     instructions: 'Take with dinner',
     times: ['20:00'],
     startDate: '2026-01-01',

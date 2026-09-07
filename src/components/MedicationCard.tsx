@@ -2,6 +2,7 @@ import {
   Check,
   Clock,
   MoreVertical,
+  Pencil,
   SkipForward,
 } from 'lucide-react';
 
@@ -28,8 +29,13 @@ export default function MedicationCard({
 }: MedicationCardProps) {
   const { medication, time, status } = item;
 
+  const handleEdit = () => {
+    onEdit(medication.id);
+  };
+
   return (
     <article className={`medication-card ${status}`}>
+      {/* Medication color indicator */}
       <div
         className="medication-color"
         style={{
@@ -37,23 +43,37 @@ export default function MedicationCard({
         }}
       />
 
+      {/* Scheduled time */}
       <div className="medication-time">
         <Clock size={16} />
         <span>{formatTime(time)}</span>
       </div>
 
+      {/* Medication information */}
       <div className="medication-info">
         <div className="medication-title-row">
           <h3>{medication.name}</h3>
 
+          {/* Desktop edit button */}
           <button
             type="button"
-            className="more-button"
-            onClick={() => onEdit(medication.id)}
-            title="Edit medication"
+            className="more-button desktop-edit-button"
+            onClick={handleEdit}
+            title={`Edit ${medication.name}`}
             aria-label={`Edit ${medication.name}`}
           >
             <MoreVertical size={18} />
+          </button>
+
+          {/* Mobile edit button */}
+          <button
+            type="button"
+            className="mobile-edit-button"
+            onClick={handleEdit}
+            aria-label={`Edit ${medication.name}`}
+          >
+            <Pencil size={15} />
+            <span>Edit</span>
           </button>
         </div>
 
@@ -68,6 +88,7 @@ export default function MedicationCard({
         )}
       </div>
 
+      {/* Medication actions */}
       <div className="medication-actions">
         {status === 'taken' ? (
           <button
